@@ -5,7 +5,7 @@ import Footer from './Compoents/Footer';
 import Navbar from './Compoents/Navbar';
 import About from './Compoents/About';
 import Contactus from './Compoents/Contactus';
-import Other from './Compoents/Other';
+import NewsApp from './Compoents/NewsApp';
 import Wrap from './Compoents/Wrap';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Page404 from './Compoents/Page404';
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route  exact path="/" element={<Wrap />}/>
             <Route exact path="/about" element={<About/>} />
-            <Route exact path="/project" element={<Other/>} />
+            <Route exact path="/project" element={<NewsApp/>} />
             <Route exact path="/contact" element={<Contactus/>} />  
             <Route path="*" element={<Page404/>} />  
         </Routes>
