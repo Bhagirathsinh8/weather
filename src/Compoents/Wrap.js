@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import NewsApp from './NewsApp';
 
 
 function Wrap(props) {
@@ -92,8 +93,8 @@ function Wrap(props) {
     e.preventDefault();
     // getData();
   }
-if(city === ""){
-}
+  if (city === "") {
+  }
 
 
 
@@ -204,7 +205,7 @@ if(city === ""){
                     <div>
                       <i className="fa-sharp-duotone fa-solid fa-wind"></i>
                       <p>Gust</p>
-                      <p className="font-bold">{gust ?  gust:"-"}%</p>
+                      <p className="font-bold">{gust ? gust : "-"}%</p>
                     </div>
                     <div>
                       <i className="fa-solid fa-circle-notch"></i>
@@ -244,9 +245,9 @@ if(city === ""){
               <div>
                 {/* <!-- Weekly Forecast --> */}
 
-                <h2 className="font-bold">WEEKLY FORECAST <span className='text-red-600'> &#160; * Coming Soon *</span></h2>
-                <div className="mt-3">
-                  {/* <div className="grid grid-cols-4 gap-4 items-center bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
+                <h2 className="font-bold ">WEEKLY FORECAST <span className='text-red-600'> &#160; * Coming Soon *</span></h2>
+                <div className="mt-5">
+                  <div className="grid grid-cols-4 gap-4 items-center bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
                     <p className="font-bold">Thursday</p>
                     <i className="fas fa-sun text-xl"></i>
                     <p>21°C</p>
@@ -257,7 +258,7 @@ if(city === ""){
                     <i className="fas fa-cloud text-xl"></i>
                     <p>21°C</p>
                     <p className="text-right">1.92 m/s</p>
-                  </div> 
+                  </div>
                   <div className="grid grid-cols-4 gap-4 items-center  bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
                     <p className="font-bold">Saturday</p>
                     <i className="fas fa-cloud text-xl"></i>
@@ -281,18 +282,24 @@ if(city === ""){
                     <i className="fas fa-sun text-xl"></i>
                     <p>23°C</p>
                     <p className="text-right">1.99 m/s</p>
-                  </div> 
+                  </div>
                   <div className="grid grid-cols-4 gap-4 items-center  bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
                     <p className="font-bold">Tuesday</p>
                     <i className="fas fa-sun text-xl"></i>
                     <p>23°C</p>
                     <p className="text-right">1.99 m/s</p>
-                  </div>  */}
+                  </div>
+                  <div className="grid grid-cols-4 gap-4 items-center  bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
+                    <p className="font-bold">Tuesday</p>
+                    <i className="fas fa-sun text-xl"></i>
+                    <p>23°C</p>
+                    <p className="text-right">1.99 m/s</p>
+                  </div>
 
                 </div>
               </div>
             </div>
-
+           
             {/* <!-- GitHub Icon --> */}
             <div className="absolute top-4 right-4">
               {/* <i className="fab fa-github text-2xl"></i> */}
@@ -300,6 +307,9 @@ if(city === ""){
             </div>
           </div>
         </div>
+        <div className=' bg-blue-400 h-full w-full mr-0 p-3' style={{"height":"auto","width":"auto"}}>
+              <NewsApp />
+            </div>
       </div>
     </>
   )

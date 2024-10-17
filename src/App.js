@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route  exact path="/" element={<Wrap />}/>
             <Route exact path="/about" element={<About/>} />
-            <Route exact path="/project" element={<NewsApp/>} />
+            <Route exact path="/newsapp" element={<NewsApp/>} />
             <Route exact path="/contact" element={<Contactus/>} />  
             <Route path="*" element={<Page404/>} />  
         </Routes>
