@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Newscard({ data }) {
-    console.log(data);
+    // console.log(data);
 
 
     return (

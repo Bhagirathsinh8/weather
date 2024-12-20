@@ -16,7 +16,7 @@ useEffect(() =>{
     const getData = async () => {
         const response = await fetch(`https://newsapi.org/v2/everything?q=${searchinput}&apiKey=${API_KEY}`);
         const jsonData = await response.json();
-        console.log(jsonData.articles);
+        // console.log(jsonData.articles);
         SetNewsData(jsonData.articles);
     }
 
