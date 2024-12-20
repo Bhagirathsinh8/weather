@@ -7,7 +7,8 @@ export default function NewsApp() {
     const [searchinput, SetSearchInput] = useState("India");
     const [newsdata, SetNewsData] = useState(null);
     
-    const API_KEY = '2bfa079c72bd47f1b620cc70a538bf0a';
+    const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+    console.log("API_KEY", API_KEY);
 
 useEffect(() =>{
     getData();

@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 
 function Wrap() {
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
   // console.log("API key: " + apiKey);
   const [serachinput, SetSearchInput] = useState("India");
   const [city, setCity] = useState("Rajkot");
@@ -26,7 +26,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
   const [degree, setDegree] = useState("73");
   const [longitude, setLongitude] = useState("-----");
   const [latitude, setLatitude] = useState("-----");
-  // const [fdata, setFdata] = useState([]);
+  const [fdata, setFdata] = useState({});
 
   const handleInput = (e) => {
     SetSearchInput(setCity(e.target.value))
@@ -36,7 +36,6 @@ useEffect(()=>{
   getData();
  }, [serachinput]);
 
- 
 
   const getData = async () => {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metrics&appid=${apiKey}`);
@@ -44,6 +43,8 @@ useEffect(()=>{
     console.log("Get Data");
     console.log(data);
     setData(data);
+  
+
   };
 
   function setData(data) {
@@ -255,14 +256,14 @@ useEffect(()=>{
                 <div className="mt-5">
                   
                   
-                  {/* <div className="grid grid-cols-4 gap-4 items-center bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
+                  <div className="grid grid-cols-4 gap-4 items-center bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
                     <p className="font-bold">Thursday</p>
                     <i className="fas fa-sun text-xl"></i>
                     <p>21°C</p>
                     <p className="text-right">3.58 m/s</p>
-                  </div> */}
+                  </div>
                  
-                  {/* <div className="grid grid-cols-4 gap-4 items-center  bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
+                  <div className="grid grid-cols-4 gap-4 items-center  bg-cyan-400 bg-opacity-50 rounded-lg p-4 mb-4">
                     <p className="font-bold">Friday</p>
                     <i className="fas fa-cloud text-xl"></i>
                     <p>21°C</p>
@@ -303,7 +304,7 @@ useEffect(()=>{
                     <i className="fas fa-sun text-xl"></i>
                     <p>23°C</p>
                     <p className="text-right">1.99 m/s</p>
-                  </div>. */}
+                  </div>.
                 </div>
               </div>
             </div>
@@ -320,6 +321,7 @@ useEffect(()=>{
           style={{ height: "auto", width: "auto" }}
         >
           {/* <NewsApp /> */}
+          
         </div>
       </div>
     </>
